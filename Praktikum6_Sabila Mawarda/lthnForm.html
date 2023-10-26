@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+</head>
+<body>
+    <h1>Form Pendaftaran Mahasiswa Baru</h1>
+    <form action="knfrm_pendaftaran.html" method="post">
+        <label for="nama">Nama Mahasiswa:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="nim">No. HP:</label>
+        <input type="text" id="nim" name="nim" required><br><br>
+
+        <label for="prodi">Program Studi:</label>
+        <select id="prodi" name="prodi" required>
+            <option value="RPL">Rekayasa Perangkat Lunak</option>
+            <option value="ABI">Administrasi Bisnis Internasional</option>
+            <option value="AKP">Akuntansi Keuangan Publik</option>
+        </select><br><br>
+
+        <label for="alamat">Alamat:</label>
+        <textarea id="alamat" name="alamat" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Daftar">
+    </form>
+</body>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+</html>
