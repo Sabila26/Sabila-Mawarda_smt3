@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Sabila</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #0078d4;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+        }
+        .sidebar {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            background-color: #eee;
+        }
+        .content {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .footer {
+            clear: both;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="polibang.png" alt="Logo Polibang">
+        <h1>Politeknik Balekambang Jepara</h1>
+        <p>Program Studi RPL (Rekayasa Perangkat Lunak)</p>
+    </header>
+    <nav>
+        <a href="bio.html">Tentang Saya</a>
+        <a href="javascript:void(0);" onclick="tampilkanVisiMisi()">Visi Misi</a>
+        <a href="https://www.polibang.ac.id">Info Polibang</a>
+        <a href="lthnForm.html">Formulir Pendaftaran</a>
+    </nav>
+    <div class="content" id="content">
+        <!-- Konten akan diperbarui oleh JavaScript -->
+    </div>
+    <div class="sidebar">
+        <h3>Daftar Mahasiswa/i</h3>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="tampilkanIdentitas(4)">Sabila Mawarda</a></li>
+            <li><a href="javascript:void(0);" onclick="tampilkanIdentitas(1)">Yuli Istikhomah</a></li>
+            <li><a href="javascript:void(0);" onclick="tampilkanIdentitas(2)">Trafel Selfi</a></li>
+            <li><a href="javascript:void(0);" onclick="tampilkanIdentitas(3)">Salsabila Norsita</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <img src="polibang.png" alt="Small Logo" width="50" height="60">
+        <p>Copyright © 2023 | Sabila Mawarda | Polibang</p>
+        <p><h6>Alamat: Jl. Ponpes Balekambang RT 02 RW 07 Gemiring Lor Nalumsari Jepara</h6></p>
+    </div>
+    <script>
+        function tampilkanIdentitas(namaTeman) {
+            var content = document.getElementById("content");
+            var identitasTeman = "";
+            var fotoTeman = "";
+
+            // Isi dengan konten identitas dan foto teman berdasarkan nama atau nomor teman
+            if (namaTeman === 1) {
+                identitasTeman = "Identitas Teman 1<br>Nama: Yuli Istikhomah<br>NIM: 123456";
+                fotoTeman = "<img src='yuli.jpg' alt='Foto Yuli'>";
+            } else if (namaTeman === 2) {
+                identitasTeman = "Identitas Teman 2<br>Nama: Trafel Selfi<br>NIM: 789012";
+                fotoTeman = "<img src='selfi.jpg' alt='Foto Trafel Selfi'>";
+            } else if (namaTeman === 3) {
+                identitasTeman = "Identitas Teman 3<br>Nama: Salsabila Norsita<br>NIM: 345678";
+                fotoTeman = "<img src='salsa.jpg' alt='Foto Salsabila Norsita'>";
+            } else if (namaTeman === 4) {
+                identitasTeman = "Identitas Teman 4<br>Nama: Sabila Mawarda<br>NIM: 901234";
+                fotoTeman = "<img src='sabila.jpg' alt='Foto Sabila Mawarda'>";
+            }
+
+            // Tampilkan identitas dan foto teman di dalam frame "content"
+            content.innerHTML = identitasTeman + "<br>" + fotoTeman;
+        }
+
+        function tampilkanVisiMisi() {
+            var content = document.getElementById("content");
+            // Isi dengan konten Visi dan Misi
+            var visiMisi = "<h2>Visi dan Misi</h2>" +
+                "<p><b>Visi</b></p>" +
+                "<p>Menjadi Politeknik yang Berdaya Saing Global, Professional dan beraqidah Ahlus Sunnah Wal Jama’ah.</p>" +
+                "<p><b>Misi</b></p>" +
+                "<ul>" +
+                "<li>Menyelenggarakan dan mengembangkan pendidikan yang mampu berdaya saing dalam era globalisasi.</li>" +
+                "<li>Menyelenggarakan dan menghasilkan pendidikan yang profesional sesuai dengan prinsip good university governance.</li>" +
+                "<li>Membangun komunitas yang ikhlas, toleransi, moderat dan religi dalam menjaga Negara Kesatuan Republik Indonesia.</li>" +
+                "<li>Melaksanakan Tri Dharma peguruan tinggi.</li>" +
+                "</ul>";
+            // Tampilkan konten Visi dan Misi di dalam frame "content"
+            content.innerHTML = visiMisi;
+        }
+    </script>
+</body>
+</html>
